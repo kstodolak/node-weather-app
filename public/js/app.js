@@ -9,7 +9,7 @@ form.addEventListener('submit', e => {
     const searchInput = document.getElementById('address-input');
     const address = searchInput.value;
     fetch(
-        `http://localhost:3001/weather?address=${address}`
+        `/weather?address=${address}`
     )
         .then(resp => resp.json())
         .then(resp => renderForecast(resp.forecast));
