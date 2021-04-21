@@ -61,11 +61,11 @@ app.get('/weather', ({query}, response) => {
     }
     forecast(
         query.address,
-        resp => {
-            const forecastText = `It's `;
+        (resp, translation) => {
             return response.send({
                 address: query.address,
-                forecast: resp
+                forecast: resp,
+                translation
             });
         },
         err => {

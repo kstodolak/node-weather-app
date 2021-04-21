@@ -1,5 +1,5 @@
 const nodeFetch = require('node-fetch');
-
+const translate = require('./translate');
 const uriBase = 'http://api.weatherstack.com/current?access_key=a6d307b97df9a313f5068cd742afd31b';
 
 
@@ -11,7 +11,10 @@ const forecast = (address, success, fail) => {
         }
     )
         .then(resp => resp.json())
-        .then(resp => success(resp))
+        .then(async resp => {
+            const translatedText = await translate('Partly cloudy');
+            success(resp,translatedText);
+        })
         .catch(err => fail(err));
 }
 
