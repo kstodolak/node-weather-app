@@ -76,10 +76,15 @@ button:hover{
     align-items: center;
     justify-content: center;
 }
-
-.forecast-img-wrapper *{
-    margin: 0 10px;
+.weather-info{
+    text-align: center;
 }
+.weather-info span{
+    font-weight: bold;
+}
+/*.forecast-img-wrapper *{*/
+/*    margin: 0 10px;*/
+/*}*/
 .forecast-img-wrapper img{
     border: 1px solid #bbbbbb;
     border-radius: 50%;

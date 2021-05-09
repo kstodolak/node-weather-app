@@ -22,8 +22,12 @@ const renderForecast = (forecastData) => {
     wrapper.innerHTML = `
         <h2>Forecast:</h2>
         <div class="forecast-img-wrapper">
-            <img src="" alt="weather">
+            <img src="${forecastData.current.weather_icons[0]}" alt="weather">
             <p class="temperature" id="msg-temp">${forecastData.current.temperature}<span>&deg;C</span></p>
+        </div>
+        <div class="weather-info">
+            <p class="weather-description" id="msg-description">Weather: <span>${forecastData.current.weather_descriptions[0]}</span></p>
+            <p>Wind speed: <span>${forecastData.current.wind_speed}</span>kph</p>
         </div>
     `;
 }

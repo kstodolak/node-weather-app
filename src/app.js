@@ -37,7 +37,7 @@ app.get('/help', (request, response) => {
        'help',
        {
            title: 'Help',
-           helpText : 'Some helpful text',
+           helpText : 'Just type address to input and click search button.',
            name: 'Kacper Stodolar'
        }
    )
